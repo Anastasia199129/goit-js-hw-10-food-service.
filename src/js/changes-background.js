@@ -4,13 +4,13 @@ const onInputClick = event => {
   event.preventDefault();
   //   console.log(localStorage.setItem('theme', 'kkkk'));
 
-  const b = document.body.classList.contains('dark-theme');
-  if (!b) {
+  const darkTheme = document.body.classList.contains('dark-theme');
+  if (!darkTheme) {
     document.body.classList.add('dark-theme');
     document.body.classList.remove('light-theme');
     // localStorage.removeItem('theme');
     localStorage.setItem('theme', document.body.classList);
-  } else if (b) {
+  } else if (darkTheme) {
     // localStorage.removeItem('theme');
     document.body.classList.add('light-theme');
     document.body.classList.remove('dark-theme');
